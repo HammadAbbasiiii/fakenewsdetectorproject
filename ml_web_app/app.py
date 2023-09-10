@@ -33,9 +33,9 @@ def stemming(content):
     con = [port_stem.stem(word) for word in con if not word in stopwords.words('english')]
     con = ' '.join(con)
     return con
-@app.route('/')
-def index():
-    return render_template('index.html')
+# @app.route('/')
+# def index():
+#     return render_template('index.html')
 
 # @app.route('/predict', methods=['POST'])
 # def predict():
