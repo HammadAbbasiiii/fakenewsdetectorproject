@@ -1,4 +1,4 @@
-absl-py==0.12.0
+absl-py>=1.0.0
 Flask==2.0.1
 numpy==1.19.5
 regex==2023.8.8
