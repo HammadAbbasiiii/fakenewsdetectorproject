@@ -1,15 +1,19 @@
 import re
-import joblib
-import numpy as np
-from keras.utils import pad_sequences
-from keras.preprocessing.text import tokenizer_from_json
-from keras.models import load_model
-from nltk.corpus import stopwords
-from nltk.stem import PorterStemmer
+# import joblib
+# import numpy as np
+# from keras.utils import pad_sequences
+# from keras.preprocessing.text import tokenizer_from_json
+# from keras.models import load_model
+# from nltk.corpus import stopwords
+# from nltk.stem import PorterStemmer
 from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
-
+@app.route('/')
+def index():
+    return render_template('index.html')
+if __name__ == '__main__':
+    app.run(debug=True)
 # Load your models and other resources
 # (Replace these with your actual model paths and imports)
 # port_stem = PorterStemmer()
@@ -33,11 +37,8 @@ app = Flask(__name__)
 #     con = [port_stem.stem(word) for word in con if not word in stopwords.words('english')]
 #     con = ' '.join(con)
 #     return con
-@app.route('/')
-def index():
-    return render_template('index.html')
-if __name__ == '__main__':
-    app.run(debug=True)
+
+
 
 
 
