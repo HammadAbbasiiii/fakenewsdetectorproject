@@ -26,13 +26,13 @@ app = Flask(__name__)
 #     maxlen = int(f.read())
 
 # Function for stemming (You can use it when you uncomment the code above)
-def stemming(content):
-    con = re.sub('[^a-zA-Z]', ' ', content)
-    con = con.lower()
-    con = con.split()
-    con = [port_stem.stem(word) for word in con if not word in stopwords.words('english')]
-    con = ' '.join(con)
-    return con
+# def stemming(content):
+#     con = re.sub('[^a-zA-Z]', ' ', content)
+#     con = con.lower()
+#     con = con.split()
+#     con = [port_stem.stem(word) for word in con if not word in stopwords.words('english')]
+#     con = ' '.join(con)
+#     return con
 @app.route('/')
 def index():
     return render_template('index.html')
